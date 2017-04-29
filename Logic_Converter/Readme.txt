@@ -23,8 +23,6 @@ a LOW level by the 5 V device via the conducting MOS-FET. So the bus lines of bo
 LOW at the same voltage level.
 
 The three states show that the logic levels are transferred in both directions of the bus system, independent of
-the driving section. State 2 and state 3 perform the “wired AND” function between the bus lines of both sections
-as required by the I2C-bus specification.
-
+the driving section.
 Other supply voltages than 3.3V for VDD1 and 5V for VDD2 can be applied. In normal operation VDD2 must be equal 
 to or higher than VDD1.
