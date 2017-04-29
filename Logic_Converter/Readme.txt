@@ -1,5 +1,5 @@
-Description of the level shift operation.
-For the level shift operation three states has to be considered:
+Description of the level shift operation. [Source - Philips AN97055]
+For the level shift operation, following three states have to be considered:
 
 • State 1:
 	 No device is pulling down the bus line and the bus line of the “Lower voltage” section is pulled up
