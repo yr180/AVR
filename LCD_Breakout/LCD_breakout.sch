@@ -9005,10 +9005,9 @@ Source: www.kingbright.com</description>
 </classes>
 <parts>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X16" device=""/>
-<part name="R3" library="rcl" deviceset="R-EU_" device="R1206"/>
+<part name="R3" library="rcl" deviceset="R-EU_" device="0204/5"/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X8" device=""/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X3" device=""/>
-<part name="JP4" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="JP5" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="R1" library="resistor" deviceset="R-TRIMM" device="3339P"/>
 <part name="U$1" library="HD44780LCD" deviceset="LCD-HD44780" device="16X2-4-HOLES" technology="4-HOLES" value="LCD-HD447804-HOLES16X2-4-HOLES"/>
@@ -9024,8 +9023,8 @@ Source: www.kingbright.com</description>
 <plain>
 <text x="76.2" y="76.2" size="1.778" layer="91">VCC</text>
 <text x="76.2" y="78.74" size="1.778" layer="91">GND</text>
-<text x="76.2" y="22.86" size="1.778" layer="91">A</text>
-<text x="76.2" y="20.32" size="1.778" layer="91">K</text>
+<text x="73.66" y="22.86" size="1.778" layer="91">A</text>
+<text x="73.66" y="20.32" size="1.778" layer="91">K</text>
 <text x="76.2" y="66.04" size="1.778" layer="91">RS</text>
 <text x="76.2" y="63.5" size="1.778" layer="91">RW</text>
 <text x="76.2" y="60.96" size="1.778" layer="91">E</text>
@@ -9044,7 +9043,6 @@ Source: www.kingbright.com</description>
 <instance part="R3" gate="G$1" x="53.34" y="22.86"/>
 <instance part="JP2" gate="A" x="73.66" y="40.64"/>
 <instance part="JP3" gate="A" x="73.66" y="63.5"/>
-<instance part="JP4" gate="G$1" x="73.66" y="20.32"/>
 <instance part="JP5" gate="G$1" x="73.66" y="76.2"/>
 <instance part="R1" gate="G$1" x="53.34" y="73.66" rot="R180"/>
 <instance part="U$1" gate="G$1" x="-5.08" y="40.64" rot="MR0"/>
@@ -9254,13 +9252,6 @@ Source: www.kingbright.com</description>
 <wire x1="93.98" y1="38.1" x2="91.44" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="JP4" gate="G$1" pin="1"/>
-<pinref part="R3" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$18" class="0">
 <segment>
 <pinref part="R3" gate="G$1" pin="1"/>
@@ -9271,18 +9262,6 @@ Source: www.kingbright.com</description>
 <wire x1="5.08" y1="25.4" x2="25.4" y2="25.4" width="0.1524" layer="91"/>
 <junction x="25.4" y="25.4"/>
 <pinref part="U$1" gate="G$1" pin="A"/>
-</segment>
-</net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="JP4" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="20.32" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="38.1" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="5.08" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
-<junction x="25.4" y="22.86"/>
-<pinref part="U$1" gate="G$1" pin="K"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -9331,6 +9310,15 @@ Source: www.kingbright.com</description>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
+<segment>
+<wire x1="71.12" y1="20.32" x2="38.1" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="20.32" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="1"/>
+<wire x1="38.1" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="5.08" y1="22.86" x2="25.4" y2="22.86" width="0.1524" layer="91"/>
+<junction x="25.4" y="22.86"/>
+<pinref part="U$1" gate="G$1" pin="K"/>
+</segment>
 </net>
 <net name="+5V" class="0">
 <segment>
@@ -9361,6 +9349,10 @@ Source: www.kingbright.com</description>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="P+1" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="R3" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="22.86" x2="58.42" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
