@@ -13495,13 +13495,6 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/PMLL41
 <pinref part="IC1" gate="G$1" pin="PB0(ICP)"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PB3(MOSI/OC2)"/>
-<pinref part="X2" gate="G$1" pin="1"/>
-<wire x1="129.54" y1="116.84" x2="68.58" y2="116.84" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$24" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PC2(ADC2)"/>
@@ -13512,10 +13505,19 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/PMLL41
 <net name="N$26" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PB4(MISO)"/>
-<wire x1="96.52" y1="114.3" x2="68.58" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="96.52" y1="114.3" x2="104.14" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="114.3" x2="68.58" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="114.3" x2="109.22" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="1"/>
+<wire x1="109.22" y1="116.84" x2="129.54" y2="116.84" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$3" class="0">
+<segment>
 <pinref part="X2" gate="G$1" pin="9"/>
 <wire x1="104.14" y1="106.68" x2="129.54" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB3(MOSI/OC2)"/>
+<wire x1="68.58" y1="116.84" x2="104.14" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="116.84" x2="104.14" y2="106.68" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
