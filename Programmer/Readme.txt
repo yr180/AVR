@@ -13,15 +13,6 @@ Features:
 - Planned: serial interface to target (e.g. for debugging).
 
 
-LICENSE
-
-USBasp is distributed under the terms and conditions of the GNU GPL version
-2 (see "firmware/usbdrv/License.txt" for details).
-
-USBasp is built with V-USB driver by OBJECTIVE DEVELOPMENT GmbH. See
-"firmware/usbdrv/" for further information.
-
-
 LIMITATIONS
 
 Hardware:
@@ -36,7 +27,7 @@ interface to slave exists in hardware but the firmware doesn't support it yet.
 USE PRECOMPILED VERSION
 
 Firmware:
-Flash "bin/firmware/usbasp.atmega88.xxxx-xx-xx.hex" or
+Flash "usbasp.atmega88.xxxx-xx-xx.hex" or
 "bin/firmware/usbasp.atmega8.xxxx-xx-xx.hex" to the used controller with a
 working programmer (e.g. with avrdude, uisp, ...). Set jumper J2 to activate
 USBasp firmware update function.
@@ -68,63 +59,6 @@ J3 SCK option
    Then SCK is scaled down from 375 kHz to about 8 kHz.
 
 
-BUILDING AND INSTALLING FROM SOURCE CODE
-
-Firmware:
-To compile the firmware
-1. install the GNU toolchain for AVR microcontrollers (avr-gcc, avr-libc),
-2. change directory to firmware/
-3. run "make main.hex"
-4. flash "main.hex" to the ATMega(4)8. E.g. with uisp or avrdude (check
-the Makefile option "make flash"). To flash the firmware you have
-to set jumper J2 and connect USBasp to a working programmer.
-You have to change the fuse bits for external crystal, (check the Makefile
-option "make fuses").
-
-Software (avrdude):
-AVRDUDE supports USBasp since version 5.2. 
-1. install libusb: http://libusb.sourceforge.net/
-2. get latest avrdude release: http://download.savannah.gnu.org/releases/avrdude/
-3. cd avrdude-X.X.X
-5. configure to your environment:
-   ./bootstrap (I had to comment out the two if-blocks which verify the
-                installed versions of autoconf and automake)
-   ./configure
-6. compile and install it:
-   make 
-   make install
-
-Notes on Windows (Cygwin):
-Download libusb-win32-device-bin-x.x.x.x.tar.gz from
-http://libusb-win32.sourceforge.net/ and unpack it.
--> copy lib/gcc/libusb.a to lib-path
--> copy include/usb.h to include-path
-cd avrdude
-./configure LDFLAGS="-static" --enable-versioned-doc=no
-make
-
-Notes on Darwin/MacOS X:
-after "./configure" I had to edit Makefile:
-change "avrdude_CPPFLAGS" to "AM_CPPFLAGS"
-(why is this needed only on mac? bug in configure.ac?)
-
-Notes on Linux:
-To use USBasp as non-root, you have to define some device rules. See
-bin/linux-nonroot for an example.
-
-FILES IN THE DISTRIBUTION
-
-Readme.txt ...................... The file you are currently reading
-firmware ........................ Source code of the controller firmware
-firmware/usbdrv ................. AVR USB driver by Objective Development
-firmware/usbdrv/License.txt ..... Public license for AVR USB driver and USBasp
-circuit ......................... Circuit diagram in PDF and EAGLE format
-bin ............................. Precompiled programs
-bin/win-driver .................. Windows driver
-bin/firmware .................... Precompiled firmware
-bin/linux-nonroot ............... Linux device rule file
-
-
 MORE INFORMATION
 
 For more information on USBasp and it's components please visit the
@@ -137,6 +71,3 @@ avrdude ......................... http://www.nongnu.org/avrdude/
 libusb .......................... http://libusb.sourceforge.net/
 libusb-win32 .................... http://libusb-win32.sourceforge.net/
 
-
-2011-05-28 Thomas Fischl <tfischl@gmx.de>
-http://www.fischl.de
