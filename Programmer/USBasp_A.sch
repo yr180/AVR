@@ -13180,7 +13180,6 @@ Source: http://www.semiconductors.philips.com/acrobat_download/datasheets/PMLL41
 <sheets>
 <sheet>
 <plain>
-<text x="119.38" y="48.26" size="2.54" layer="94">Prashant kumar</text>
 </plain>
 <instances>
 <instance part="X1" gate="G$1" x="71.12" y="53.34" rot="R270"/>
